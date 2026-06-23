@@ -158,4 +158,28 @@ varies across households.
   absolute effect of receiving any campaign versus none.
   
 ## Repo Structure
+
+├── 01_research_design.ipynb     # Study population, treatment definition, overlap diagnostics
+
+├── 02_silver_tables.ipynb       # Joins, feature engineering, window logic
+
+├── 03_gold_tables.ipynb         # Household-grain aggregation
+
+├── 04_eda.ipynb                 # Balance table, SMD analysis, outcome transformation
+
+├── 05_causal_discovery.ipynb    # PC algorithm, DAG, domain knowledge overlay
+
+├── 06_causal_model.ipynb        # CausalForestDML, ATE, CATE, heterogeneity
+
+├── 07_refutation.ipynb          # DoWhy refutation tests
+
+└── plots/
+
 ## Reproducibility
+1. Sign up for Databricks Community Edition at
+   community.cloud.databricks.com
+2. Download Dunnhumby Complete Journey from Kaggle
+3. Upload all 8 CSV files individually to DBFS via Data > Add Data
+4. Install required libraries on your cluster:
+   `econml dowhy causal-learn`
+5. Run notebooks in order 01 through 07
